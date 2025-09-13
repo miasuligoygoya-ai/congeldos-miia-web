@@ -78,4 +78,3 @@ document.addEventListener('DOMContentLoaded', () => {
         window.open(whatsappUrl, '_blank');
     });
 });
-
