@@ -73,8 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         orderSummary += "\n¡Gracias!";
 
         // Reemplaza TUNUMERO con tu número de WhatsApp
-        const whatsappUrl = `https://wa.me/TUNUMERO?text=${encodeURIComponent(orderSummary)}`;
+        const whatsappUrl = `https://wa.me/5493777691594?text=${encodeURIComponent(orderSummary)}`;
         
         window.open(whatsappUrl, '_blank');
     });
 });
+
