@@ -3,23 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartBtn = document.getElementById('cart-btn');
 
     products.forEach(product => {
-        const incrementBtn = product.querySelector('.increment-btn');
-        const decrementBtn = product.querySelector('.decrement-btn');
-        const quantitySpan = product.querySelector('.quantity');
+        // Verifica si el producto tiene el selector de cantidad (para ensaladas, alfajores, etc.)
+        const quantitySelector = product.querySelector('.quantity-selector');
+        if (quantitySelector) {
+            const incrementBtn = quantitySelector.querySelector('.increment-btn');
+            const decrementBtn = quantitySelector.querySelector('.decrement-btn');
+            const quantitySpan = quantitySelector.querySelector('.quantity');
 
-        incrementBtn.addEventListener('click', () => {
-            let quantity = parseInt(quantitySpan.textContent);
-            quantity++;
-            quantitySpan.textContent = quantity;
-        });
-
-        decrementBtn.addEventListener('click', () => {
-            let quantity = parseInt(quantitySpan.textContent);
-            if (quantity > 0) {
-                quantity--;
+            incrementBtn.addEventListener('click', () => {
+                let quantity = parseInt(quantitySpan.textContent);
+                quantity++;
                 quantitySpan.textContent = quantity;
-            }
-        });
+            });
+
+            decrementBtn.addEventListener('click', () => {
+                let quantity = parseInt(quantitySpan.textContent);
+                if (quantity > 0) {
+                    quantity--;
+                    quantitySpan.textContent = quantity;
+                }
+            });
+        }
     });
 
     cartBtn.addEventListener('click', () => {
@@ -28,11 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         products.forEach(product => {
             const productName = product.dataset.productName;
-            const quantity = parseInt(product.querySelector('.quantity').textContent);
+            
+            // Revisa si es la sección de empanadas unificada
+            if (productName === "Empanadas") {
+                let empanadasOrder = '';
+                let totalDozens = 0;
+                
+                const flavors = product.querySelectorAll('.flavor-select');
+                flavors.forEach(flavor => {
+                    const quantity = parseInt(flavor.value);
+                    if (quantity > 0) {
+                        const flavorName = flavor.id;
+                        empanadasOrder += `* ${flavorName}: ${quantity} docena(s)\n`;
+                        totalDozens += quantity;
+                    }
+                });
+                
+                if (totalDozens > 0) {
+                    orderSummary += `* Empanadas (${totalDozens} docena(s) en total):\n${empanadasOrder}\n`;
+                    hasItems = true;
+                }
 
-            if (quantity > 0) {
-                orderSummary += `* ${productName}: ${quantity}\n`;
-                hasItems = true;
+            } else { // Si no son empanadas, usa el contador de cantidad de los otros productos
+                const quantityElement = product.querySelector('.quantity');
+                if (quantityElement) {
+                    const quantity = parseInt(quantityElement.textContent);
+                    if (quantity > 0) {
+                        orderSummary += `* ${productName}: ${quantity} unidad(es)\n`;
+                        hasItems = true;
+                    }
+                }
             }
         });
 
@@ -43,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         orderSummary += "\n¡Gracias!";
 
-        const encodedMessage = encodeURIComponent(orderSummary);
-        const whatsappUrl = `https://wa.me/5493777691594?text=${encodedMessage}`;
-
+        // Reemplaza TUNUMERO con tu número de WhatsApp
+        const whatsappUrl = `https://wa.me/TUNUMERO?text=${encodeURIComponent(orderSummary)}`;
+        
         window.open(whatsappUrl, '_blank');
     });
 });
