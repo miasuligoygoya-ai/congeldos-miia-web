@@ -17,6 +17,7 @@
             <img src="ensalada-frutas.jpg" alt="Ensalada de Frutas">
             <h2>Ensalada de Frutas</h2>
             <p>Fresca y deliciosa, ideal para cualquier momento del día.</p>
+            <p class="price">Precio: $ </p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -28,6 +29,7 @@
             <img src="alfajores.jpg" alt="Alfajores de Maicena">
             <h2>Alfajores de Maicena</h2>
             <p>Clásicos, suaves y con mucho dulce de leche.</p>
+            <p class="price">Precio: $5000 por docena</p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -39,6 +41,7 @@
             <img src="chipa.jpg" alt="Chipá Congelado">
             <h2>Chipá Congelado</h2>
             <p>Listos para hornear. ¡Ideales para una tarde de mate!</p>
+            <p class="price">Precio: $ 500gr</p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -46,38 +49,39 @@
             </div>
         </div>
 
-        <div class="product-card" data-product-name="Empanadas de Carne">
-            <img src="empanadas-carne.jpg" alt="Empanadas de carne">
-            <h2>Empanadas de Carne</h2>
-            <p>Relleno casero y tradicional, listas para hornear.</p>
-            <div class="quantity-selector">
-                <button class="decrement-btn">-</button>
-                <span class="quantity">0</span>
-                <button class="increment-btn">+</button>
-            </div>
-        </div>
-
-        <div class="product-card" data-product-name="Empanadas de Pollo">
-            <img src="empanadas-pollo.jpg" alt="Empanadas de Pollo">
-            <h2>Empanadas de Pollo</h2>
-            <p>Jugosas y con un sabor único. ¡Perfectas para tu freezer!</p>
-            <div class="quantity-selector">
-                <button class="decrement-btn">-</button>
-                <span class="quantity">0</span>
-                <button class="increment-btn">+</button>
-            </div>
-        </div>
-
-        <div class="product-card" data-product-name="Empanadas de Jamón y Queso">
-            <img src="empanadas-jamon-queso.jpg" alt="Empanadas de Jamón y Queso">
-            <h2>Empanadas de Jamón y Queso</h2>
-            <p>El clásico que a todos les encanta, ¡super cremosas!</p>
-            <div class="quantity-selector">
-                <button class="decrement-btn">-</button>
-                <span class="quantity">0</span>
-                <button class="increment-btn">+</button>
-            </div>
-        </div>
+       <div class="product-card" data-product-name="Empanadas">
+    <img src="empanadas-jamon-queso.jpg" alt="Empanadas de varios sabores">
+    <h2>Empanadas por Docena</h2>
+    <p>Elige tus sabores favoritos y la cantidad de docenas que quieras.</p>
+<p class="price">Precio: $9000 por docena</p> <div class="flavor-options">
+           <div class="flavor-options">
+        <label for="carne">Carne:</label>
+        <select id="carne" class="flavor-select">
+            <option value="0">0</option>
+            <option value="1">1 docena</option>
+            <option value="2">2 docenas</option>
+            <option value="3">3 docenas</option>
+        </select>
+    </div>
+    <div class="flavor-options">
+        <label for="pollo">Pollo:</label>
+        <select id="pollo" class="flavor-select">
+            <option value="0">0</option>
+            <option value="1">1 docena</option>
+            <option value="2">2 docenas</option>
+            <option value="3">3 docenas</option>
+        </select>
+    </div>
+    <div class="flavor-options">
+        <label for="jamon-queso">Jamón y Queso:</label>
+        <select id="jamon-queso" class="flavor-select">
+            <option value="0">0</option>
+            <option value="1">1 docena</option>
+            <option value="2">2 docenas</option>
+            <option value="3">3 docenas</option>
+        </select>
+    </div>
+</div>
     </main>
 
     <footer class="cart-button-container">
@@ -88,6 +92,7 @@
 </body>
 
 </html>
+
 
 
 
