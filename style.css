@@ -20,15 +20,16 @@ header h1 {
     font-size: 2.5rem;
 }
 
-
 /* Contenedor de productos */
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding: 2rem;
-    justify-items: center;
 }
+
+
 
 /* Tarjeta de producto */
 .product-card {
@@ -163,4 +164,5 @@ header h1 {
         padding: 0.8rem 2rem;
     }
 }
+
 
