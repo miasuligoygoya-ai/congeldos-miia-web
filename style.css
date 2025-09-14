@@ -20,16 +20,14 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Contenedor de productos */
+/* Contenedor de productos - Nuevo */
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding: 2rem;
-    justify-items: center;
 }
-
-
 
 /* Tarjeta de producto */
 .product-card {
@@ -75,8 +73,8 @@ header h1 {
     margin-top: 0.5rem;
 }
 
-/* Selector de cantidad y sabor */
-.quantity-selector, .flavor-options {
+/* Selector de cantidad y sabor - Nuevo */
+.quantity-selector {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +101,19 @@ header h1 {
     font-size: 1.4rem;
     font-weight: bold;
     color: #495057;
+}
+
+.flavor-container {
+    display: flex;
+    flex-direction: column; /* Esto hará que los sabores se apilen */
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.flavor-options {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .flavor-options label {
@@ -164,6 +175,3 @@ header h1 {
         padding: 0.8rem 2rem;
     }
 }
-
-
-
