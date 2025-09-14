@@ -39,15 +39,13 @@ header h1 {
 }
 
 /* Tarjeta de producto */
-.product-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-    width: 90%;
-    max-width: 450px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.product-card img {
+    /* Reducimos el ancho máximo para hacer las imágenes más pequeñas */
+    width: 150px;
+    height: auto; /* Mantenemos la proporción original de la imagen */
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ecf0f1;
 }
 
 .product-card:hover {
@@ -205,3 +203,4 @@ header h1 {
         padding: 0.8rem 2rem;
     }
 }
+
