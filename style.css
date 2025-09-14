@@ -1,3 +1,4 @@
+
 /* Estilos generales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,7 +21,7 @@ header h1 {
     font-size: 2.5rem;
 }
 
-/* Contenedor de productos - Nuevo */
+/* Contenedor de productos */
 .products-container {
     display: flex;
     flex-direction: column;
@@ -73,7 +74,7 @@ header h1 {
     margin-top: 0.5rem;
 }
 
-/* Selector de cantidad y sabor - Nuevo */
+/* Selector de cantidad y sabor */
 .quantity-selector {
     display: flex;
     justify-content: center;
