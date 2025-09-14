@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>congelados.miia</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Congelados Miia</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>congelados.miia</h1>
+        <h1>Congelados Miia</h1>
     </header>
 
     <main class="products-container">
+
         <div class="product-card" data-product-name="Ensalada de Frutas">
             <img src="ensalada-frutas.jpg" alt="Ensalada de Frutas">
             <h2>Ensalada de Frutas</h2>
             <p>Fresca y deliciosa, ideal para cualquier momento del día.</p>
-            <p class="price">Precio: $ </p>
+            <p class="price">Precio: $XXX</p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -29,7 +33,7 @@
             <img src="alfajores.jpg" alt="Alfajores de Maicena">
             <h2>Alfajores de Maicena</h2>
             <p>Clásicos, suaves y con mucho dulce de leche.</p>
-            <p class="price">Precio: $5000 por docena</p>
+            <p class="price">Precio: $XXX</p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -41,7 +45,7 @@
             <img src="chipa.jpg" alt="Chipá Congelado">
             <h2>Chipá Congelado</h2>
             <p>Listos para hornear. ¡Ideales para una tarde de mate!</p>
-            <p class="price">Precio: $ 500gr</p>
+            <p class="price">Precio: $XXX</p>
             <div class="quantity-selector">
                 <button class="decrement-btn">-</button>
                 <span class="quantity">0</span>
@@ -49,50 +53,48 @@
             </div>
         </div>
 
-       <div class="product-card" data-product-name="Empanadas">
-    <img src="empanadas-jamon-queso.jpg" alt="Empanadas de varios sabores">
-    <h2>Empanadas por Docena</h2>
-    <p>Elige tus sabores favoritos y la cantidad de docenas que quieras.</p>
-<p class="price">Precio: $9000 por docena</p> <div class="flavor-options">
-           <div class="flavor-options">
-        <label for="carne">Carne:</label>
-        <select id="carne" class="flavor-select">
-            <option value="0">0</option>
-            <option value="1">1 docena</option>
-            <option value="2">2 docenas</option>
-            <option value="3">3 docenas</option>
-        </select>
-    </div>
-    <div class="flavor-options">
-        <label for="pollo">Pollo:</label>
-        <select id="pollo" class="flavor-select">
-            <option value="0">0</option>
-            <option value="1">1 docena</option>
-            <option value="2">2 docenas</option>
-            <option value="3">3 docenas</option>
-        </select>
-    </div>
-    <div class="flavor-options">
-        <label for="jamon-queso">Jamón y Queso:</label>
-        <select id="jamon-queso" class="flavor-select">
-            <option value="0">0</option>
-            <option value="1">1 docena</option>
-            <option value="2">2 docenas</option>
-            <option value="3">3 docenas</option>
-        </select>
-    </div>
-</div>
+        <div class="product-card" data-product-name="Empanadas">
+            <img src="empanadas-varias.jpg" alt="Empanadas de varios sabores">
+            <h2>Empanadas por Docena</h2>
+            <p>Elige tus sabores favoritos y la cantidad de docenas que quieras.</p>
+            <p class="price">Precio: $XXX por docena</p>
+            <div class="flavor-container">
+                <div class="flavor-options">
+                    <label for="carne">Carne:</label>
+                    <select id="carne" class="flavor-select">
+                        <option value="0">0</option>
+                        <option value="1">1 docena</option>
+                        <option value="2">2 docenas</option>
+                        <option value="3">3 docenas</option>
+                    </select>
+                </div>
+                <div class="flavor-options">
+                    <label for="pollo">Pollo:</label>
+                    <select id="pollo" class="flavor-select">
+                        <option value="0">0</option>
+                        <option value="1">1 docena</option>
+                        <option value="2">2 docenas</option>
+                        <option value="3">3 docenas</option>
+                    </select>
+                </div>
+                <div class="flavor-options">
+                    <label for="jamon-queso">Jamón y Queso:</label>
+                    <select id="jamon-queso" class="flavor-select">
+                        <option value="0">0</option>
+                        <option value="1">1 docena</option>
+                        <option value="2">2 docenas</option>
+                        <option value="3">3 docenas</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <footer class="cart-button-container">
+    <div class="cart-button-container">
         <button id="cart-btn">Realizar Pedido</button>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
