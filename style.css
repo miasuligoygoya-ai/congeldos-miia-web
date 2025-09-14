@@ -106,7 +106,7 @@ header h1 {
 
 .flavor-container {
     display: flex;
-    flex-direction: column; /* Esto hará que los sabores se apilen */
+    flex-direction: column;
     gap: 1.5rem;
     margin-top: 1rem;
 }
